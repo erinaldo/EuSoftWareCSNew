@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:v2="http://fedex.com/ws/cnty/v2">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v2:PostalCodeInquiryRequest>
+         <v2:WebAuthenticationDetail>
+            <v2:UserCredential>
+               <v2:Key>@P1</v2:Key>
+               <v2:Password>@P2</v2:Password>
+            </v2:UserCredential>
+         </v2:WebAuthenticationDetail>
+         <v2:ClientDetail>
+            <v2:AccountNumber>@P3</v2:AccountNumber>
+            <v2:MeterNumber>@P4</v2:MeterNumber>
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+         </v2:ClientDetail>
+         <!--Optional:-->
+         <v2:TransactionDetail>
+            <v2:CustomerTransactionId>***Hao yuan***</v2:CustomerTransactionId>
+         </v2:TransactionDetail>
+         <v2:Version>
+            <v2:ServiceId>cnty</v2:ServiceId>
+            <v2:Major>2</v2:Major>
+            <v2:Intermediate>0</v2:Intermediate>
+            <v2:Minor>0</v2:Minor>
+         </v2:Version>
+         <!--Optional:-->
+         <!--Optional:-->
+         <!--Optional:-->
+         <v2:PostalCode>@P5</v2:PostalCode>
+         <v2:CountryCode>@P6</v2:CountryCode>
+      </v2:PostalCodeInquiryRequest>
+   </soapenv:Body>
+</soapenv:Envelope>

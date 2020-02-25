@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" TextQuality="Regular" ReportInfo.Description="Demonstrates simple list report. To create it:&#13;&#10;&#13;&#10;- go to &quot;Data&quot; menu and select &quot;Choose Report Data...&quot; item to select datasource;&#13;&#10;&#13;&#10;- go to &quot;Report|Configure Bands...&quot; menu to create the band structure;&#13;&#10;&#13;&#10;- return to the report page, doubleclick the data band to show its editor;&#13;&#10;&#13;&#10;- choose the datasource;&#13;&#10;&#13;&#10;- drag data from the Data Dictionary window to the band." ReportInfo.Created="01/17/2008 03:05:57" ReportInfo.Modified="07/29/2016 14:31:20" ReportInfo.CreatorVersion="2015.3.10.0">
+  <ScriptText>using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Windows.Forms;
+using System.Drawing;
+using System.Data;
+using FastReport;
+using FastReport.Data;
+using FastReport.Dialog;
+using FastReport.Barcode;
+using FastReport.Table;
+using FastReport.Utils;
+
+namespace FastReport
+{
+  public class ReportScript
+  {
+    private void ReportTitle1_BeforePrint(object sender, EventArgs e)
+    {
+       Text12.Text =&quot; 内置代码应用测试.&quot;;      
+    }
+  }
+}
+</ScriptText>
+  <Dictionary>
+    <TableDataSource Name="Grade" ReferenceName="Grade" DataType="System.Int32" Enabled="true">
+      <Column Name="ID" DataType="System.Int32"/>
+      <Column Name="Class" DataType="System.String"/>
+      <Column Name="Level" DataType="System.Int32"/>
+    </TableDataSource>
+    <BusinessObjectDataSource Name="Student" ReferenceName="Student" DataType="System.Collections.Generic.List`1[[FFW.Entity.Student, FFW.Entity, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]" Enabled="true">
+      <Column Name="ID" DataType="System.Int32"/>
+      <Column Name="Name" DataType="System.String"/>
+      <Column Name="Age" DataType="System.Int32"/>
+    </BusinessObjectDataSource>
+    <Parameter Name="参数1" DataType="System.String"/>
+    <Parameter Name="参数2" DataType="System.DateTime"/>
+  </Dictionary>
+  <ReportPage Name="Page1" Guides="151.2,567,699,18.9,283.5,321.3,292.95,557.55,189,396.9,695.75">
+    <ReportTitleBand Name="ReportTitle1" Width="718.2" Height="151.2" BeforePrintEvent="ReportTitle1_BeforePrint" Guides="4.72,118.12,0,132,122.85,151.2,23.62,94.5,116">
+      <TextObject Name="Text1" Left="151.2" Top="4.72" Width="415.8" Height="113.4" Text="自定义报表" HorzAlign="Center" VertAlign="Center" Font="宋体, 36pt, style=Bold" TextFill.Color="DarkRed"/>
+      <BarcodeObject Name="Barcode1" Left="567" Width="132" Height="132" Text="http://munet.cnblogs.com/" ShowText="false" AllowExpressions="true" Barcode="QR Code" Barcode.ErrorCorrection="L" Barcode.Encoding="UTF8" Barcode.QuietZone="true"/>
+      <TextObject Name="Text12" Left="151.2" Top="122.85" Width="415.8" Height="28.35" Font="宋体, 15.75pt" TextFill.Color="Red"/>
+      <TextObject Name="Text14" Left="18.9" Top="4.72" Width="264.6" Height="18.9" Text="参数1:[参数1]" Font="宋体, 9pt" TextFill.Color="DodgerBlue"/>
+      <TextObject Name="Text13" Left="18.9" Top="94.5" Width="302.4" Height="21.5" Text="自定义函数：[NumToRMB(100500000.15)]" Font="宋体, 9pt" TextFill.Color="ForestGreen"/>
+      <TextObject Name="Text15" Left="292.95" Top="4.72" Width="264.6" Height="18.9" Text="参数2:[参数2]" Font="宋体, 9pt" TextFill.Color="DodgerBlue"/>
+    </ReportTitleBand>
+    <ColumnHeaderBand Name="ColumnHeader1" Top="155.2" Width="718.2" Height="56.7" Guides="9.45,56.7">
+      <TextObject Name="Text2" Left="18.9" Top="9.45" Width="170.1" Height="47.25" Border.Lines="All" Fill.Color="Red" GrowToBottom="true" CanBreak="false" Text="序列" HorzAlign="Center" VertAlign="Bottom" WordWrap="false" Font="宋体, 22pt, style=Bold"/>
+      <TextObject Name="Text3" Left="189" Top="9.45" Width="207.9" Height="47.25" Border.Lines="All" Fill="Glass" Fill.Color="Turquoise" Fill.Blend="0.2" Fill.Hatch="true" GrowToBottom="true" CanBreak="false" Text="班级" HorzAlign="Center" VertAlign="Bottom" WordWrap="false" Font="宋体, 22pt, style=Bold"/>
+      <TextObject Name="Text4" Left="396.9" Top="9.45" Width="170.1" Height="47.25" Border.Lines="All" Fill="Glass" Fill.Color="Turquoise" Fill.Blend="0.2" Fill.Hatch="true" GrowToBottom="true" CanBreak="false" Text="年级" HorzAlign="Center" VertAlign="Bottom" WordWrap="false" Font="宋体, 22pt, style=Bold"/>
+      <TextObject Name="Text8" Left="567" Top="9.45" Width="128.75" Height="47.25" Border.Lines="All" Fill="Glass" Fill.Color="Turquoise" Fill.Blend="0.2" Fill.Hatch="true" GrowToBottom="true" CanBreak="false" Text="条码" HorzAlign="Center" VertAlign="Bottom" WordWrap="false" Font="宋体, 22pt, style=Bold"/>
+    </ColumnHeaderBand>
+    <DataBand Name="Data1" Top="215.9" Width="718.2" Height="47.25" Guides="0,47.25" DataSource="Grade" KeepTogether="true">
+      <TextObject Name="Text5" Left="18.9" Width="170.1" Height="47.25" Border.Lines="All" Text="[Grade.ID]" HorzAlign="Center" VertAlign="Center" Font="宋体, 24pt, style=Bold" TextFill.Color="Red"/>
+      <TextObject Name="Text6" Left="189" Width="207.9" Height="47.25" Border.Lines="All" Text="[Grade.Class]" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 24pt, style=Bold"/>
+      <TextObject Name="Text7" Left="396.9" Width="170.1" Height="47.25" Border.Lines="All" Text="[Grade.Level]" HorzAlign="Center" VertAlign="Center" Font="宋体, 24pt, style=Bold"/>
+      <BarcodeObject Name="Barcode2" Left="567" Width="128.75" Height="47.25" Border.Lines="All" DataColumn="Grade.ID" Barcode="EAN13"/>
+      <DataBand Name="Data2" Top="267.15" Width="718.2" Height="47.25" Guides="0,47.25" DataSource="Student">
+        <TextObject Name="Text9" Left="18.9" Width="170.1" Height="47.25" Border.Lines="All" Text="[Student.ID]" HorzAlign="Center" VertAlign="Center" Font="宋体, 24pt, style=Bold"/>
+        <TextObject Name="Text10" Left="189" Width="207.9" Height="47.25" Border.Lines="All" Text="[Student.Name]" HorzAlign="Center" VertAlign="Center" Font="宋体, 24pt, style=Bold"/>
+        <TextObject Name="Text11" Left="396.9" Width="170.1" Height="47.25" Border.Lines="All" Text="[Student.Age]" HorzAlign="Center" VertAlign="Center" Font="宋体, 24pt, style=Bold"/>
+        <BarcodeObject Name="Barcode3" Left="567" Width="128.75" Height="47.25" Border.Lines="All" DataColumn="Student.ID" Barcode="EAN13"/>
+      </DataBand>
+    </DataBand>
+  </ReportPage>
+</Report>

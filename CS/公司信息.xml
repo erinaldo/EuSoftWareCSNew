@@ -1,0 +1,41 @@
+﻿<Gs>
+  <GsInfo>
+  	<ID>1</ID>
+    <senders>John Gao</senders>
+    <Country>US</Country>
+    <Company>Medchemexpress LLC</Company>
+    <ContactName>John Gao</ContactName>
+    <Address1>9 Deer park Drive, Suite K-2</Address1>
+    <Address2></Address2>
+    <City>Monmouth Junction</City>
+    <ZIP>08852</ZIP>
+    <FirstPhone>7324849848</FirstPhone>
+    <Emial>sales@medchemexpress.com</Emial>
+  </GsInfo>
+   <GsInfo>
+   	<ID>2</ID>
+    <senders>James Gao</senders>
+    <Country>US</Country>
+    <Company>Chemscene LLC</Company>
+    <ContactName>James Gao</ContactName>
+    <Address1>9 Deer park Drive, Suite K-2</Address1>
+    <Address2></Address2>
+    <City>Monmouth Junction</City>
+    <ZIP>08852</ZIP>
+    <FirstPhone>7324849848</FirstPhone>
+    <Emial>sales@medchemexpress.com</Emial>
+  </GsInfo>
+   <GsInfo>
+   	<ID>3</ID>
+    <senders>branden lee</senders>
+    <Country>US</Country>
+    <Company>abovchem llc</Company>
+    <ContactName>branden lee</ContactName>
+    <Address1>9 Deer park Drive, Suite K-2</Address1>
+    <Address2></Address2>
+    <City>Monmouth Junction</City>
+    <ZIP>08852</ZIP>
+    <FirstPhone>7324849848</FirstPhone>
+    <Emial>sales@medchemexpress.com</Emial>
+  </GsInfo>
+</Gs>

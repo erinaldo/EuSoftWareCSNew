@@ -1,0 +1,24 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Medical.Yottor.UI.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="Theme" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Sharp</Value>
+    </Setting>
+    <Setting Name="IsSaveUser" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="LastUser" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Admin</Value>
+    </Setting>
+    <Setting Name="LastPwd" Type="System.String" Scope="User">
+      <Value Profile="(Default)">123456</Value>
+    </Setting>
+    <Setting Name="SalesCompany" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="ConnectionStringUSA" Type="System.String" Scope="User">
+      <Value Profile="(Default)">PROVIDER=SQLOLEDB;DATA SOURCE=34.207.148.81;UID=UserCS;PWD=DB#20160922145351017@231;DATABASE=CSUSA;connect timeout=1000;</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
